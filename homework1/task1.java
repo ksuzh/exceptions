@@ -9,6 +9,10 @@ public class task1 {
 
         int[] myArray = {1, 2, 3, 4, 5};
         System.out.println(elementByIndex(myArray, 7));
+
+        String[] someArray = {"whatever", "no", "idea"};
+        printStringArray(someArray);
+
     }
 
 
@@ -27,6 +31,12 @@ public class task1 {
         return array[index];
     }
 
-    
+    //null pointer
+    public static void printStringArray(String[] strArray){
+        for (String item: strArray){
+            if(item == null) throw new NullPointerException("No element");
+            System.out.println(item);
+        }
+    }
 
 }
